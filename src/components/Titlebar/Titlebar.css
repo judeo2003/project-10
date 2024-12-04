@@ -1,0 +1,66 @@
+.titlebar {
+  height: 30px;
+  background: var(--titlebar-bg);
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  -webkit-app-region: drag;
+  user-select: none;
+}
+
+.titlebar-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-item {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 6px 8px;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.menu-item:hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.window-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.menu-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--sidebar-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  min-width: 180px;
+  z-index: 1000;
+  padding: 4px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menu-dropdown.show {
+  display: block;
+}
+
+.menu-dropdown .menu-item {
+  padding: 6px 12px;
+  display: block;
+  width: 100%;
+  font-size: 12px;
+}
+
+.menu-dropdown .menu-item:hover {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}

@@ -1,0 +1,102 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --editor-bg: #1e1e1e;
+    --sidebar-bg: #252526;
+    --activity-bar-bg: #333333;
+    --titlebar-bg: #323233;
+    --text-primary: #d4d4d4;
+    --text-secondary: #cccccc;
+    --border-color: #474747;
+    --hover-bg: rgba(90, 93, 94, 0.31);
+    --accent-color: #0e639c;
+    --accent-hover: #1177bb;
+    --accent-color-rgb: 14, 99, 156;
+    --scrollbar-width: 14px;
+  }
+  
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    background: var(--editor-bg);
+    color: var(--text-primary);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Global scrollbar styles */
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-width);
+    height: var(--scrollbar-width);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    min-height: 36px;
+    border: 4px solid transparent;
+    border-radius: 7px;
+    background-clip: padding-box;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  /* Hide scrollbar when not hovering */
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Show scrollbar on hover */
+  .hide-scrollbar:hover {
+    scrollbar-width: auto;
+    -ms-overflow-style: auto;
+  }
+
+  .hide-scrollbar:hover::-webkit-scrollbar {
+    display: block;
+  }
+</style>

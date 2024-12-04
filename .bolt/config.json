@@ -1,0 +1,39 @@
+{
+  "version": "1.0.0",
+  "lastSavedState": {
+    "timestamp": "1970-01-01T00:00:00.000Z",
+    "description": "VS Code-like editor with music sheet support",
+    "features": [
+      "Dark theme support",
+      "File explorer with custom icons",
+      "Settings panel",
+      "Tab management",
+      "Music sheet rendering",
+      "Custom scrollbars",
+      "File type icons including MIDI and MusicXML"
+    ],
+    "dependencies": {
+      "core": [
+        "@astrojs/solid-js",
+        "solid-js",
+        "astro"
+      ],
+      "music": [
+        "opensheetmusicdisplay",
+        "vexflow"
+      ],
+      "utils": [
+        "@solid-primitives/keyboard",
+        "@solid-primitives/storage"
+      ]
+    },
+    "components": [
+      "Editor",
+      "FileTree",
+      "MusicSheet",
+      "Settings",
+      "Sidebar",
+      "Titlebar"
+    ]
+  }
+}

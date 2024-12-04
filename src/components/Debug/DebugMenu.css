@@ -1,0 +1,40 @@
+.debug-menu {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  background: var(--sidebar-bg);
+  border-bottom: 1px solid var(--border-color);
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.debug-menu-group {
+  display: flex;
+  gap: 4px;
+}
+
+.debug-menu-item {
+  background: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.debug-menu-item:hover:not(:disabled) {
+  background: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.debug-menu-item:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,42 @@
+.file-viewer {
+  height: 100%;
+  overflow-y: auto;
+  padding: 1rem;
+  background: var(--editor-bg);
+  color: var(--text-primary);
+}
+
+.file-content {
+  margin: 0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: pre;
+  tab-size: 2;
+}
+
+/* Custom Scrollbar Styles */
+.file-viewer::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+.file-viewer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.file-viewer::-webkit-scrollbar-thumb {
+  min-height: 36px;
+  border: 4px solid transparent;
+  border-radius: 7px;
+  background-clip: padding-box;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.file-viewer::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.file-viewer::-webkit-scrollbar-corner {
+  background: transparent;
+}

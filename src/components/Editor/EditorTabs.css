@@ -1,0 +1,59 @@
+.editor-tabs {
+  display: flex;
+  background: var(--editor-bg);
+  border-bottom: 1px solid var(--border-color);
+  height: 35px;
+}
+
+.editor-tab {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background: var(--editor-bg);
+  color: var(--text-secondary);
+  border-right: 1px solid var(--border-color);
+  cursor: pointer;
+  user-select: none;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.editor-tab.active {
+  background: var(--sidebar-bg);
+  color: var(--text-primary);
+}
+
+.editor-tab:hover {
+  background: var(--sidebar-bg);
+}
+
+.tab-icon {
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.tab-title {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.tab-close {
+  margin-left: 5px;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 16px;
+  padding: 0 4px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.tab-close:hover {
+  opacity: 1;
+  background: var(--hover-bg);
+  border-radius: 3px;
+}

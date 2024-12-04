@@ -1,0 +1,28 @@
+{
+  "name": "solid-code",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/solid-js": "^3.0.2",
+    "@aws-amplify/ui": "^5.8.1",
+    "@solid-primitives/keyboard": "^1.2.5",
+    "@solid-primitives/storage": "^2.1.1",
+    "@solid-primitives/event-listener": "^2.3.0",
+    "@tonejs/midi": "^2.0.28",
+    "aws-amplify": "^5.3.11",
+    "solid-js": "^1.8.22",
+    "opensheetmusicdisplay": "^1.8.4",
+    "soundfont-player": "^0.12.0",
+    "vexflow": "^4.2.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "astro": "^3.6.4"
+  }
+}
